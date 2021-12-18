@@ -2,8 +2,8 @@ const nodemailer = require('nodemailer');
 //?? si se desea probar con gmail descomentar estas linea Ethereal
 
 // const mail = {
-//     user: 'brennan.bins3@ethereal.email',
-//     pass: 'vrFUC236fzREEyECy7'
+//     user: 'ole.hilll60@ethereal.email',
+//     pass: 'tGe3TwW1tcdkn8GBDr'
 // }
 // const transporter = nodemailer.createTransport({
 //     host: 'smtp.ethereal.email',

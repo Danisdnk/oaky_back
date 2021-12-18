@@ -47,7 +47,7 @@ const loginUsuario = async (req, res = response) => {
 
 
     const validPassword = bcrypt.compareSync(password, usuario.password);
-    console.log(validPassword)
+
 
     if (!validPassword) {
 
@@ -192,7 +192,6 @@ const findParentChild = async (req, res = response) => {
 const findParentId = async (req, res = response) => {
 
     let hijo = await Children.find({ parent_id: req.param.id })
-    console.log(hijo)
 
     try {
         let padre = await Usuario.findOne(req.param.id);
@@ -223,4 +222,4 @@ module.exports = {
     userPasswordReset,
     userChangePasswordReset,
     updatePassword
-}
+}   

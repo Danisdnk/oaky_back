@@ -61,7 +61,7 @@ const deleteChild = async (req, res = response) => {
     try {
         var deleted = await Children.remove({ _id: req.params.id })
 
-        console.log(deleted)
+
         if (deleted.n === 0 && deleted.ok === 1) {
             throw Error("User Could not be deleted")
         }

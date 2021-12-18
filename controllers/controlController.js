@@ -4,7 +4,7 @@ const Control = require("../models/Control");
 const crearControlMedico = async (req, res = response) => {
 
     let control = new Control(req.body);
-    console.log(req.body)
+
     await control.save();
 
     return res.status(200).json({
@@ -42,7 +42,7 @@ const editarControlMedico = async (req, res = response) => {
 const findControlForChild = async (req, res = response) => {
 
     let controls = await Control.find({ child_id: req.params.id })
-    console.log(controls)
+
     try {
         res.status(200).json({
             ok: true,
@@ -65,7 +65,7 @@ const deleteControl = async (req, res = response) => {
     try {
         var deleted = await Control.remove({ _id: req.params.id })
 
-        console.log(deleted)
+
         if (deleted.n === 0 && deleted.ok === 1) {
             throw Error("User Could not be deleted")
         }
